@@ -141,8 +141,8 @@ if __name__ == "__main__":
     import uvicorn
 
     uvicorn.run(
-        "backend.main:app" if (ROOT / "backend/__init__.py").exists() else app,
-        host="127.0.0.1",
+        "backend.main:app",
+        host="0.0.0.0",
         port=PORT,
         reload=False,
     )
